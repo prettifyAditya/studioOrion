@@ -1,0 +1,157 @@
+@keyframes shine {
+  from {
+    opacity: 0;
+    left: 0%;
+  }
+  50% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    left: 100%;
+  }
+}
+.banner.about-banner::before {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%), linear-gradient(0deg, rgba(0, 0, 0, 0) 14%, rgba(0, 0, 0, 0.8) 100%);
+}
+.banner.about-banner .bg {
+  height: calc(100vh - var(--headerfixed));
+}
+@media only screen and (max-width: 1400px) {
+  .banner.about-banner .bg {
+    height: 100vh;
+  }
+}
+.banner.about-banner .bg .banner-wrapper {
+  width: 100%;
+  top: unset;
+  bottom: 20%;
+  translate: 0 20%;
+}
+.banner.about-banner .bg .banner-wrapper .container-fluid .content, .banner.about-banner .bg .banner-wrapper .container .content {
+  max-width: 450px;
+  margin: 0 auto;
+  text-align: center;
+}
+.banner.about-banner .bg .banner-wrapper .container-fluid .content .btn, .banner.about-banner .bg .banner-wrapper .container .content .btn {
+  margin-top: 30px;
+}
+
+.about-secA {
+  background: var(--black);
+  overflow-x: hidden;
+  position: relative;
+  z-index: 0;
+}
+.about-secA::before {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background-color: var(--primary);
+  filter: blur(100px);
+  border-radius: 50%;
+}
+.about-secA::before {
+  right: 0;
+  top: 30%;
+  filter: blur(150px);
+}
+.about-secA .about_wrap {
+  height: 70vh;
+  align-items: center;
+  justify-content: space-between;
+  --gap: 40px;
+  gap: var(--gap);
+}
+.about-secA .about_wrap .colA {
+  flex: 0 1 40%;
+  max-width: 40%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 0;
+}
+.about-secA .about_wrap .colA::before {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background-color: var(--primary);
+  filter: blur(100px);
+  border-radius: 50%;
+}
+.about-secA .about_wrap .colA::before {
+  left: 74%;
+  top: 0;
+}
+.about-secA .about_wrap .colA figure {
+  width: 400px;
+}
+.about-secA .about_wrap .colB {
+  flex: calc(60% - var(--gap));
+  max-width: calc(60% - var(--gap));
+  width: 100%;
+}
+.about-secA .about_wrap .colB .heading h2 {
+  font-family: "Optima";
+  font-size: 48px;
+  text-transform: capitalize;
+  line-height: 1.5;
+  margin-bottom: 5px;
+}
+.about-secA .about_wrap .colB .heading .subhead {
+  margin-top: 0;
+  font-size: 20px;
+  color: var(--white);
+}
+.about-secA .about_wrap .colB .content {
+  padding: 20px 0 30px;
+  max-width: 560px;
+}
+.about-secA .about_wrap .colB .content p {
+  color: var(--colortext);
+}
+
+.about-secB {
+  background: var(--bglight);
+}
+.about-secB .flex {
+  align-items: center;
+}
+.about-secB .flex .colA {
+  flex: 0 1 65%;
+  max-width: 65%;
+  width: 100%;
+}
+.about-secB .flex .colA figure {
+  position: relative;
+  line-height: 0;
+}
+.about-secB .flex .colA figure p {
+  position: absolute;
+  right: 6%;
+  bottom: 10%;
+  transform: translate(6%, 10%);
+  font-size: 24px;
+}
+.about-secB .flex .colA figure img {
+  height: 100%;
+}
+.about-secB .flex .colB {
+  flex: 1;
+  padding: 20px 50px;
+}
+.about-secB .flex .colB figcaption h3 {
+  font-family: "Optima";
+  font-size: 36px;
+  line-height: 1.5;
+  color: var(--primary);
+  text-transform: capitalize;
+  margin-bottom: 10px;
+}
+.about-secB .flex .colB figcaption p {
+  color: var(--text);
+}/*# sourceMappingURL=about.css.map */

@@ -1,0 +1,178 @@
+@import '../_var'
+
+.banner
+    &.home-banner
+        &::before
+            background: linear-gradient(270deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 100%), linear-gradient(0deg, rgba(0, 0, 0, 0) 14%, rgba(0, 0, 0, 0.9) 100%)
+        .bg 
+            height: calc(100vh - var(--headerfixed))
+            @include media(1400)
+                height: 100vh
+            .banner-wrapper
+                width: 100%
+                top: 60%
+                translate: 0 -60%
+                .container-fluid, .container
+                    .content
+                        max-width: 700px
+                        p
+                            max-width: 356px
+                        .btn
+                            margin-top: 30px
+                            
+.home-secA
+    .container-fluid
+        padding: 15px
+        .category_wrapper
+            .upper-sec
+                width: 100%
+                margin-bottom: 15px
+                .category-slider
+                    position: relative
+            .lower-sec
+                width: 100%
+                .category-col
+                    figcaption
+                        text-align: left
+
+.home-secB
+    background: linear-gradient(90deg, #523D2E, #644F3C, #352C26)
+    .upper-sec
+        text-align: center
+        margin-bottom: 50px
+        h2
+            margin-bottom: 20px
+        .tab-nav
+            display: flex
+            align-items: center
+            justify-content: center
+            gap: 40px
+            li
+                font-family: $Circular
+                padding: 5px 20px
+                border-radius: 25px
+                color: $white
+                border: 1px solid transparent
+                transition: .5s ease
+                &.active 
+                    border-color: $primary
+    .lower-sec
+        .tabs
+            transform: translateY(10px)
+            &.active
+                transform: translateY(0)
+        .product-container
+            position: relative
+            .product-slider
+                max-width: 98%
+            .btn_wrap
+                text-align: center
+                .btn
+                    margin: 40px auto 0
+
+.home-secC
+    background: $black
+    overflow-x: hidden
+    @include before-blur
+    &::before
+        left: 0
+        top: 30%
+        filter: blur(150px)
+        animation: moveblur 3s ease-in-out infinite forwards
+        @keyframes moveblur 
+            0%
+                transform: translateX(0)
+            50%
+                transform: translateX(100vw)
+            100%
+                transform: translateX(0)
+    .about_wrap
+        height: 70vh
+        align-items: center
+        justify-content: space-between
+        --gap: 40px
+        gap: var(--gap)
+        .colA
+            flex: 0 1 40%
+            max-width: 40%
+            width: 100%
+            display: flex
+            align-items: center
+            justify-content: center
+            @include before-blur
+            &::before
+                left: 74%
+                top: 0
+            figure
+                width: 350px
+                animation: scalevector 7s ease infinite forwards
+                @keyframes scalevector 
+                    0%
+                        transform: scale(0.1)
+                    16%
+                        transform: scale(0.3)
+                    32%
+                        transform: scale(0.6)
+                    48%
+                        transform: scale(1) rotate(90deg)
+                    68%
+                        transform: rotate(180deg)
+                    88%
+                        transform: rotate(360deg)
+                    100%
+                        transform: scale(0.1)
+        .colB
+            flex: calc(60% - var(--gap))
+            max-width: calc(60% - var(--gap))
+            width: 100%
+            .heading
+                .subhead
+                    margin-top: 0
+                    font-size: 20px
+                    color: $white
+            .content
+                padding: 20px 0 30px
+                max-width: 560px
+                p
+                    color: var(--colortext)
+
+.home-secD
+    position: sticky
+    top: var(--headerfixed)
+    .banner
+        &::before
+            background: #00000021
+        .bg
+            height: calc( 100vh - var(--headerfixed) )
+
+.home-secE
+    background: $white
+    position: relative
+    .upper-sec
+        text-align: center
+        h2
+            text-transform: capitalize
+            font-family: $Optima
+        .swiper-nav
+            gap: 20px
+
+.home-secF
+    position: relative 
+    background: $white
+    .heading
+        margin-bottom: 5rem
+        text-align: center
+        h2
+            margin-bottom: 5px
+        p
+            color: var(--text)
+            max-width: 460px
+            margin: 0 auto 
+    .brands_sec
+        .swiper-wrapper
+            align-items: center
+            transition-timing-function: linear !important
+            figure
+                width: 140px
+                img
+                    object-fit: contain
