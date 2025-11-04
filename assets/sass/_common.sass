@@ -560,8 +560,13 @@ img
     display: grid
     grid-template-columns: repeat(var(--item), calc((100% - (var(--gaplr) * (var(--item) - 1))) / var(--item)))
     gap: var(--gaptb) var(--gaplr)
+    &.form-2
+        --item: 2
+    &.form-3
+        --item: 3
     .full
         grid-column: span var(--item)
+    
 
 
 //banner
