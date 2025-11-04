@@ -81,22 +81,23 @@
   z-index: 1;
   margin-top: 15px;
 }
-.blogs_col .btn-div {
+
+.btn-div {
   width: 100%;
   max-width: -moz-fit-content;
   max-width: fit-content;
   margin: 50px auto 0;
   cursor: pointer;
 }
-.blogs_col .btn-div:hover img {
+.btn-div:hover img {
   transform: rotate(90deg);
 }
-.blogs_col .btn-div img {
+.btn-div img {
   display: block;
   width: 80px;
   transition: 1s ease;
 }
-.blogs_col .btn-div button {
+.btn-div button {
   font-size: 16px;
   color: var(--primary);
   margin-top: 10px;

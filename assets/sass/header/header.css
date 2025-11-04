@@ -1457,6 +1457,11 @@ img {
   line-height: 1.2;
   color: var(--white);
 }
+@media only screen and (max-width: 1280px) {
+  .banner .banner-wrapper h1, .banner .banner-wrapper h2 {
+    font-size: 44px;
+  }
+}
 .banner .banner-wrapper .content p {
   color: var(--colortext);
   font-size: 16px;
@@ -2453,6 +2458,11 @@ header .header-container {
   transition: 0.5s ease;
   gap: 4rem;
 }
+@media only screen and (max-width: 1336px) {
+  header .header-container {
+    gap: 2rem;
+  }
+}
 @media only screen and (max-width: 991px) {
   header .header-container {
     gap: 1rem;
@@ -2494,6 +2504,11 @@ header .header-container .colB .nav-items {
   align-items: center;
   justify-content: center;
   gap: 40px;
+}
+@media only screen and (max-width: 1336px) {
+  header .header-container .colB .nav-items {
+    gap: 30px;
+  }
 }
 @media only screen and (max-width: 991px) {
   header .header-container .colB .nav-items {
@@ -2701,6 +2716,11 @@ header .header-container .colC {
   align-items: center;
   justify-content: end;
   gap: 40px;
+}
+@media only screen and (max-width: 1336px) {
+  header .header-container .colC {
+    gap: 30px;
+  }
 }
 header .header-container .colC button.ham-btn {
   font-size: 14px;
