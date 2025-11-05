@@ -8,6 +8,8 @@
             height: calc(100vh - var(--headerfixed))
             @include media(1400) 
                 height: 100vh
+            @include media(768)
+                height: 70vh
             .banner-wrapper
                 width: 100%
                 top: unset
@@ -23,10 +25,20 @@
 
 .category-listing-secA
     padding: 35px 0 90px
+    @include media(991)
+        padding: 35px 0 80px
+    @include media(768)
+        padding: 35px 0 70px
+    @include media(540)
+        padding: 25px 0 60px
     .category-list-grid
         display: grid
         grid-template-columns: repeat(3, 1fr)
         grid-gap: 30px 20px
+        @include media(991)
+            grid-template-columns: repeat(2, 1fr)
+        @include media(540)
+            grid-template-columns: repeat(1, 1fr)
 
 // Product Details 
 

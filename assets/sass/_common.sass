@@ -35,8 +35,6 @@ $scrollwidth: 8px
         --containerfluid: 1rem
     @include media(991)
         --containerfluid: 15px
-    @include media(767)
-        --headerfixed: 65px
     @include media(320)
         --containerfluid: 10px
 
@@ -55,9 +53,17 @@ $scrollwidth: 8px
 
 .sec-pad
     padding: 60px 0 0
+    @include media(991)
+        padding: 50px 0 0
+    @include media(768)
+        padding: 40px 0 0
 
 .sec-pad-all
     padding: 60px 0 
+    @include media(991)
+        padding: 50px 0 
+    @include media(768)
+        padding: 40px 0 
 
 body
     &::-webkit-scrollbar
@@ -123,11 +129,23 @@ h2
     line-height: 1.2
     font-family: $Kugile
     text-transform: uppercase
+    @include media(1024)
+        font-size: 38px
+    @include media(769)
+        font-size: 32px
+    @include media(540)
+        font-size: 24px
 h3
     font-size: 36px
     line-height: 1.2
     font-family: $Kugile
     text-transform: uppercase
+    @include media(1024)
+        font-size: 36px
+    @include media(769)
+        font-size: 30px
+    @include media(540)
+        font-size: 22px
 h4, h5
     font-family: $Kugile
     text-transform: uppercase
@@ -138,6 +156,15 @@ h4, h5
         font-weight: 400
         line-height: 1.2
         text-transform: uppercase
+        @include media(1280)
+            font-size: 58px
+        @include media(991)
+            font-size: 46px
+        @include media(768)
+            font-size: 40px
+        @include media(540)
+            font-size: 32px
+
     >p
         margin-top: 10px
     &.normal
@@ -312,6 +339,8 @@ button
             font-size: 28px
             color: $text
             transition: .5s ease
+            @include media(768)
+                font-size: 24px
     
 .productCol
     display: block
@@ -355,6 +384,9 @@ button
         padding: 20px
         height: 300px
         overflow: hidden
+        @include media(540)
+            height: 230px
+            padding: 15px
         @include shine()
         img
             object-fit: contain
@@ -362,6 +394,8 @@ button
     figcaption
         padding: 15px 15px 20px
         text-align: center
+        @include media(540)
+            padding: 10px 10px 15px
         h6
             color: $black
             font-size: 16px
@@ -418,9 +452,7 @@ button
     transform: translateY(100%)
     transition: 0s ease .5s,opacity .5s ease
     cursor: pointer
-    @include media(991)
-        z-index: 2
-    @include media(675)
+    @include media(540)
         display: none
     &.is-open
         transition: opacity 1s ease
@@ -601,12 +633,21 @@ img
             color: $white
             @include media(1280)
                 font-size: 44px
+            @include media(991)
+                font-size: 38px
+            @include media(768)
+                font-size: 34px
+            @include media(540)
+                font-size: 28px
+                line-height: 1.3
         .content
             p
                 color: var(--colortext)
                 font-size: 16px
                 line-height: 1.5
                 margin-top: 4px
+                @include media(768)
+                    line-height: 1.2
 
 // swiper
 
@@ -661,6 +702,9 @@ img
         display: flex
         align-items: center
         justify-content: center
+        @include media(540)
+            width: 30px
+            height: 30px
         img, svg
             width: 40%
             height: 40%
@@ -814,6 +858,10 @@ img
     .upper-sec
         position: relative
         margin-bottom: 3rem
+        @include media(991) 
+            margin-bottom: 2.5rem
+        @include media(540)
+            margin-bottom: 2rem
         .swiper-nav
             position: absolute
             top: 50%

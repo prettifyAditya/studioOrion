@@ -385,6 +385,35 @@ $(function () {
         });
     }); 
 
+    // MobileHam
+    function mobileHam(){
+        if (window.matchMedia("(max-width: 991px)").matches){
+            $('.list-filter-wrap .colB').addClass('model');
+            if (!$('.list-filter-wrap .colB > .close').length) {
+                $('.list-filter-wrap .colB').append('<button class="close filterClose" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="none" stroke="#000" stroke-width="2" d="M22 12H2m9-9l-9 9l9 9" /></svg></button>');
+            }         
+            $('.filterPopBtn').on('click', function(){
+                $('.list-filter-wrap').css('z-index', 6);
+            })
+        }
+        else{
+            $('.header-category-strip, .list-filter-wrap .colB').removeClass('model');
+            $('.header-category-strip, .list-filter-wrap .colB').find('.close').remove();
+        }
+    }
+
+    $(document).on('click', '.filterClose', function () {
+        $('.list-filter-wrap').css('z-index', 4);
+    });
+
+    $(document).ready(function(){
+        mobileHam();
+    });
+
+    $(window).resize(function(){
+        mobileHam();
+    });
+
 
     //Sliders
 
@@ -420,6 +449,32 @@ $(function () {
     commonSlider1('.testimonial-slider', '.testimonial-prev', '.testimonial-next')
     commonSlider1('.related-products-slider', '.related-projects-prev', '.related-projects-next')
     commonSlider1('.more-categories-slider', '.more-categories-prev', '.more-categories-next')
+
+    new Swiper('.category-slider', {
+        loop: false,
+        speed: 500,
+        navigation: {
+            prevEl: '.category-prev',
+            nextEl: '.category-next',
+        },
+        breakpoints: {
+            0: {
+                slidesPerView: 1,
+                spaceBetween: 10,
+                speed: 1500,
+            },
+            675: {
+                slidesPerView: 2,
+                spaceBetween: 10,
+                speed: 2000,
+            },
+            992: {
+                slidesPerView: 3,
+                spaceBetween: 15,
+                speed: 1000,
+            }
+        },
+    });
 
     new Swiper('.brand_slider', {
         loop: true,
