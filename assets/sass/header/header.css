@@ -788,6 +788,21 @@ h4, h5 {
   color: var(--primary);
   text-transform: capitalize;
 }
+@media only screen and (max-width: 991px) {
+  .heading.normal h2, .heading.normal h3 {
+    font-size: 40px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .heading.normal h2, .heading.normal h3 {
+    font-size: 36px;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .heading.normal h2, .heading.normal h3 {
+    font-size: 32px;
+  }
+}
 
 .head {
   font-family: "Kugile";
@@ -1094,6 +1109,11 @@ button {
   text-align: center;
   padding: 20px 10px 10px;
 }
+@media only screen and (max-width: 540px) {
+  .category_col figcaption {
+    padding: 15px 10px 10px;
+  }
+}
 .category_col figcaption h6 {
   font-family: "Optima";
   font-size: 28px;
@@ -1103,6 +1123,11 @@ button {
 @media only screen and (max-width: 768px) {
   .category_col figcaption h6 {
     font-size: 24px;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .category_col figcaption h6 {
+    font-size: 20px;
   }
 }
 
@@ -1156,6 +1181,11 @@ button {
   font-size: 20px;
   color: var(--text);
   transition: 0.5s ease;
+}
+@media only screen and (max-width: 768px) {
+  .productCol figcaption h6 {
+    font-size: 18px;
+  }
 }
 
 .product_col {
@@ -1366,7 +1396,6 @@ img {
 }
 @media only screen and (max-width: 540px) {
   .btn {
-    height: 26px;
     font-size: 12px;
     --padding: 14px;
   }
@@ -4424,6 +4453,7 @@ footer .bottom-footer .flex .pret a img {
   gap: 5px;
   box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.3490196078);
   font-size: 14px;
+  height: 36px;
 }
 .sticky_action .call_action:hover {
   border-color: var(--primary);

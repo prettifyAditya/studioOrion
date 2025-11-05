@@ -173,6 +173,12 @@ h4, h5
             font-size: 48px
             color: $primary
             text-transform: capitalize
+            @include media(991)
+                font-size: 40px
+            @include media(768)
+                font-size: 36px
+            @include media(540)
+                font-size: 32px
 
 .head
     font-family: $Kugile
@@ -334,6 +340,8 @@ button
     figcaption
         text-align: center
         padding: 20px 10px 10px
+        @include media(540)
+            padding: 15px 10px 10px
         h6
             font-family: $Optima
             font-size: 28px
@@ -341,6 +349,8 @@ button
             transition: .5s ease
             @include media(768)
                 font-size: 24px
+            @include media(540)
+                font-size: 20px
     
 .productCol
     display: block
@@ -370,6 +380,8 @@ button
             font-size: 20px
             color: $text
             transition: .5s ease
+            @include media(768)
+                font-size: 18px
 
 .product_col
     display: block
@@ -513,7 +525,6 @@ img
     @include media(768)
         height: 30px
     @include media(540)
-        height: 26px
         font-size: 12px
         --padding: 14px
     &::before

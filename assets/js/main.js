@@ -420,7 +420,7 @@ $(function () {
     function commonSlider1(containerSelector, prevButtonSelector, nextButtonSelector) {
         return new Swiper(containerSelector, {
             loop: false,
-            speed: 500,
+            speed: 1500,
             navigation: {
                 prevEl: prevButtonSelector,
                 nextEl: nextButtonSelector,
@@ -429,30 +429,25 @@ $(function () {
                 0: {
                     slidesPerView: 1.2,
                     spaceBetween: 10,
-                    speed: 500,
                 },
                 675: {
                     slidesPerView: 2,
                     spaceBetween: 10,
-                    speed: 2000,
                 },
                 992: {
                     slidesPerView: 3,
                     spaceBetween: 15,
-                    speed: 1000,
                 }
             }
         });
     }
-    commonSlider1('.category-slider', '.category-prev', '.category-next')
     commonSlider1('.product-slider', '.product-prev', '.product-next')
     commonSlider1('.testimonial-slider', '.testimonial-prev', '.testimonial-next')
-    commonSlider1('.related-products-slider', '.related-projects-prev', '.related-projects-next')
     commonSlider1('.more-categories-slider', '.more-categories-prev', '.more-categories-next')
 
     new Swiper('.category-slider', {
         loop: false,
-        speed: 500,
+        speed: 1500,
         navigation: {
             prevEl: '.category-prev',
             nextEl: '.category-next',
@@ -461,17 +456,37 @@ $(function () {
             0: {
                 slidesPerView: 1,
                 spaceBetween: 10,
-                speed: 1500,
             },
             675: {
                 slidesPerView: 2,
                 spaceBetween: 10,
-                speed: 2000,
             },
             992: {
                 slidesPerView: 3,
                 spaceBetween: 15,
-                speed: 1000,
+            }
+        },
+    });
+
+    new Swiper('.related-products-slider', {
+        loop: false,
+        speed: 1500,
+        navigation: {
+            prevEl: '.related-projects-prev',
+            nextEl: '.related-projects-next',
+        },
+        breakpoints: {
+            0: {
+                slidesPerView: 1.5,
+                spaceBetween: 10,
+            },
+            675: {
+                slidesPerView: 2,
+                spaceBetween: 10,
+            },
+            992: {
+                slidesPerView: 3,
+                spaceBetween: 15,
             }
         },
     });
