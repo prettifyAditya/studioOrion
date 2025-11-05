@@ -1011,11 +1011,19 @@ footer
                                 color: $white
                                 @include media(768)
                                     font-size: 20px
+                                @include media(540)
+                                    font-size: 16px
+                                    color: var(--colortext)
+                                    transition: .5s ease
+                                    padding-bottom: 5px
+                                    &:hover
+                                        color: $white
                 &.list-b
                     ul
                         li
-                            a
-                                margin-bottom: 10px
+                            &:not(:last-child)
+                                a
+                                    margin-bottom: 10px
                 ul
                     li
                         a
@@ -1030,7 +1038,9 @@ footer
                     flex: 0 1 40%
                     @include media(540)     
                         flex: 1
-                        margin-top: 20px
+                        border-top: 1px solid var(--colortext)
+                        border-bottom: 1px solid var(--colortext)
+                        padding: 10px 0
                     a
                         display: flex
                         gap: 10px
@@ -1045,6 +1055,8 @@ footer
                 gap: 20px
                 @include media(991)
                     justify-content: center
+                @include media(540)     
+                    justify-content: start
                 a
                     display: block
                     width: 40px
@@ -1191,6 +1203,8 @@ footer
                     h5, >a 
                         transform: translateX(5px)
                         transition: .5s ease
+                        @include media(540)
+                            transform: translateX(0px)
                 &.desktop-non
                     display: none
                 &.hasDropdown
@@ -1307,8 +1321,8 @@ footer
         height: 100%
         overflow-y: auto
         @include scrollbar(3px,$white,#5e5e5e,8px)
-        @include media(675)
-            padding: 70px 20px 30px
+        @include media(768)
+            padding: 0px 15px 20px
         .title
             text-align: center
             margin-bottom: 1.5rem

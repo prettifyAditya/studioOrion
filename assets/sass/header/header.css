@@ -490,6 +490,7 @@
   margin: 0;
   list-style: none;
   box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
 }
 
 :root {
@@ -1625,6 +1626,11 @@ img {
      -moz-user-select: auto;
           user-select: auto;
 }
+@media only screen and (max-width: 768px) {
+  .swiper-nav.center-full {
+    display: none;
+  }
+}
 .swiper-nav.white button {
   background: var(--white);
 }
@@ -1824,10 +1830,6 @@ img {
 }
 .website-content p, .website-content li {
   color: var(--text);
-  text-align: justify;
-  -webkit-hyphens: auto;
-          hyphens: auto;
-  word-spacing: -0.07em;
 }
 .website-content p b, .website-content li b {
   font-weight: normal;
@@ -3990,7 +3992,18 @@ footer .main-footer .colB .list.list-a ul li a {
     font-size: 20px;
   }
 }
-footer .main-footer .colB .list.list-b ul li a {
+@media only screen and (max-width: 540px) {
+  footer .main-footer .colB .list.list-a ul li a {
+    font-size: 16px;
+    color: var(--colortext);
+    transition: 0.5s ease;
+    padding-bottom: 5px;
+  }
+  footer .main-footer .colB .list.list-a ul li a:hover {
+    color: var(--white);
+  }
+}
+footer .main-footer .colB .list.list-b ul li:not(:last-child) a {
   margin-bottom: 10px;
 }
 footer .main-footer .colB .list ul li a {
@@ -4009,7 +4022,9 @@ footer .main-footer .colB .list:last-child {
 @media only screen and (max-width: 540px) {
   footer .main-footer .colB .list:last-child {
     flex: 1;
-    margin-top: 20px;
+    border-top: 1px solid var(--colortext);
+    border-bottom: 1px solid var(--colortext);
+    padding: 10px 0;
   }
 }
 footer .main-footer .colB .list:last-child a {
@@ -4030,6 +4045,11 @@ footer .main-footer .colC .social-icons {
 @media only screen and (max-width: 991px) {
   footer .main-footer .colC .social-icons {
     justify-content: center;
+  }
+}
+@media only screen and (max-width: 540px) {
+  footer .main-footer .colC .social-icons {
+    justify-content: start;
   }
 }
 footer .main-footer .colC .social-icons a {
@@ -4229,6 +4249,11 @@ footer .bottom-footer .flex .pret a img {
   transform: translateX(5px);
   transition: 0.5s ease;
 }
+@media only screen and (max-width: 540px) {
+  .model.ham-pop .model-body .nav-list > li:hover h5, .model.ham-pop .model-body .nav-list > li:hover > a {
+    transform: translateX(0px);
+  }
+}
 .model.ham-pop .model-body .nav-list > li.desktop-non {
   display: none;
 }
@@ -4378,9 +4403,9 @@ footer .bottom-footer .flex .pret a img {
   background-color: #5e5e5e;
   border-radius: 8px;
 }
-@media only screen and (max-width: 675px) {
+@media only screen and (max-width: 768px) {
   .enquire-pop .model-body {
-    padding: 70px 20px 30px;
+    padding: 0px 15px 20px;
   }
 }
 .enquire-pop .model-body .title {

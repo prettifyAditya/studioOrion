@@ -7,7 +7,7 @@
     margin: 0
     list-style: none
     box-sizing: border-box
-
+    -webkit-tap-highlight-color: transparent
 $scrollwidth: 8px
 
 :root
@@ -684,6 +684,8 @@ img
         .swiper-prev,.swiper-next
             pointer-events: all
             user-select: auto
+        @include media(768)
+            display: none
     &.white
         button
             background: $white
@@ -834,9 +836,6 @@ img
         margin: 28px 0 18px
     p,li
         color: $text
-        text-align: justify
-        hyphens: auto
-        word-spacing: -0.07em
         b
             font-weight: normal
     a

@@ -10,10 +10,15 @@
                 height: 100vh
             @include media(991)
                 height: calc(100vh - var(--headerfixed))
+            @include media(768)
+                height: 80vh
             .banner-wrapper
                 width: 100%
                 top: 60%
                 translate: 0 -60%
+                @include media(768)
+                    top: 70%
+                    translate: 0 -70%
                 .container-fluid, .container
                     @include media(1300)
                         padding: 0 25px
@@ -33,10 +38,14 @@
 .home-secA
     .container-fluid
         padding: 15px
+        @include media(540)
+            padding: 0
         .category_wrapper
             .upper-sec
                 width: 100%
                 margin-bottom: 15px
+                @include media(540)
+                    margin: 10px 0
                 .category-slider
                     position: relative
                     .swiper-wrapper
@@ -51,9 +60,14 @@
                                         font-size: 24px
             .lower-sec
                 width: 100%
+                @include media(540)
+                    padding: 0
+                    margin-bottom: 10px
                 .category-col
                     figcaption
                         text-align: left
+                        @include media(540)
+                            text-align: center
                         h6
                             @include media(1280)
                                 font-size: 32px
@@ -84,9 +98,8 @@
                 justify-content: start
                 overflow-x: auto
             &::-webkit-scrollbar
-                height: 2px
-                width: 2px
-                background: #fff
+                height: 0
+                width: 0
             &::-webkit-scrollbar-thumb
                background:  var(--primary)
             li
@@ -187,6 +200,8 @@
             @include media(768)
                 flex: 1
                 max-width: 100%
+            @include media(540)
+                text-align: center
             .heading
                 .subhead
                     margin-top: 0
@@ -195,6 +210,8 @@
                     @include media(540)
                         font-size: 18px
                         line-height: 1.2
+                        max-width: 300px
+                        margin: 10px auto
             .content
                 padding: 20px 0 30px
                 max-width: 560px
@@ -202,6 +219,12 @@
                     padding: 15px 0 25px
                 p
                     color: var(--colortext)
+                    @include media(540)
+                        text-align: justify
+                        word-spacing: -0.2em
+            .btn
+                @include media(540)
+                    margin: 0 auto
 
 .home-secD
     position: sticky
