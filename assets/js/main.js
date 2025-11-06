@@ -41,18 +41,27 @@ $(function () {
                 $('.product-not-found').show();
             }
 
-            $searchOpenImg.hide();
-            $searchCloseImg.show();
-            $searchBtn.addClass('close-search-btn');
+            if(window.matchMedia("(min-width: 541px)").matches){
+                $searchOpenImg.hide();
+                $searchCloseImg.show();
+                $searchBtn.addClass('close-search-btn');
+            }
         } else {
             $searchedProducts.show();
             $('.no-results').hide();
             $searchDropdown.stop(true, true).slideUp(200).removeClass('is-open');
-            $searchOpenImg.show();
-            $searchCloseImg.hide();
-            $searchBtn.removeClass('close-search-btn');
+            if(window.matchMedia("(min-width: 541px)").matches){
+                $searchOpenImg.show();
+                $searchCloseImg.hide();
+                $searchBtn.removeClass('close-search-btn');
+            }
         }
     });
+    if(window.matchMedia("(max-width: 541px)").matches){
+        $searchOpenImg.hide();
+        $searchCloseImg.show();
+        $searchBtn.addClass('close-search-btn');
+    }
 
     $('body').click(function (e) {
         if (!$(e.target).closest('.search_wrap').length) {
@@ -71,10 +80,15 @@ $(function () {
         $searchInput.val('');
         $searchDropdown.stop().slideUp();
         $searchDropdown.removeClass('is-open');
-        $searchCloseImg.hide();
-        $searchOpenImg.show();
-        $searchBtn.removeClass('close-search-btn');
         $searchWrap.removeClass('search_wrap_active')
+        if(window.matchMedia("(max-width: 541px)").matches){ 
+            $searchCloseImg.hide();
+            $searchOpenImg.show();
+            $searchBtn.removeClass('close-search-btn');
+        }
+        if(window.matchMedia("(max-width: 541px)").matches){ 
+            $('.search_wrapper').removeClass('open')
+        }
     })
 
     //

@@ -247,6 +247,10 @@ header
                 flex: 1
             @include media(540)
                 gap: 20px
+            .mobSearch
+                display: none
+                @include media(540)
+                    display: block
             button.ham-btn
                 font-size: 14px
                 color: var(--white)
@@ -266,9 +270,26 @@ header
                         transform: translateX(0px)
             .search_wrapper
                 position: relative
+                transition: .5s ease
+                &.open
+                    transform: translate(0, 0%)
+                @include media(540)
+                    position: fixed
+                    left: 0
+                    top: 0
+                    transform: translate(0, -100%)
+                    height: var(--headerfixed)
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    width: 100%
+                    background: $white
+                    z-index: 5
                 .search_wrap
                     position: relative
                     transition: .5s ease
+                    @include media(540)
+                        width: 100%
                     &.search_wrap_active
                         .search_input_wrap
                             width: 300px
@@ -277,7 +298,7 @@ header
                             @include media(768)
                                 width: 250px
                             @include media(540)
-                                width: 140px
+                                width: 100%
                     .search_input_wrap
                         height: 35px
                         display: flex
@@ -291,7 +312,9 @@ header
                         @include media(768)
                             width: 180px
                         @include media(540)
-                            width: 120px
+                            width: 100%
+                            border-bottom: none
+                            padding: 0 20px
                         input
                             flex: 1 
                             width: 100%
@@ -303,6 +326,10 @@ header
                             color: $white 
                             &::placeholder
                                 color: $white
+                                @include media(540)
+                                    color: $black
+                            @include media(540)
+                                color: $black
                         .search_btn
                             flex: 0 1 auto
                             height: 22px
@@ -313,6 +340,8 @@ header
                                 width: 100%
                                 height: 100%
                                 object-fit: contain
+                                @include media(540)
+                                    filter: invert(1)
                     .search_dropdown_menu
                         display: none
                         position: absolute

@@ -525,6 +525,12 @@
     --containerfluid: 15px;
   }
 }
+@media only screen and (max-width: 540px) {
+  :root {
+    --headerheight: 80px;
+    --headerfixed: 60px;
+  }
+}
 @media only screen and (max-width: 320px) {
   :root {
     --containerfluid: 10px;
@@ -2921,6 +2927,14 @@ header .header-container .colC {
     gap: 20px;
   }
 }
+header .header-container .colC .mobSearch {
+  display: none;
+}
+@media only screen and (max-width: 540px) {
+  header .header-container .colC .mobSearch {
+    display: block;
+  }
+}
 header .header-container .colC button.ham-btn {
   font-size: 14px;
   color: var(--white);
@@ -2944,10 +2958,34 @@ header .header-container .colC button.ham-btn:hover span:nth-child(2) {
 }
 header .header-container .colC .search_wrapper {
   position: relative;
+  transition: 0.5s ease;
+}
+header .header-container .colC .search_wrapper.open {
+  transform: translate(0, 0%);
+}
+@media only screen and (max-width: 540px) {
+  header .header-container .colC .search_wrapper {
+    position: fixed;
+    left: 0;
+    top: 0;
+    transform: translate(0, -100%);
+    height: var(--headerfixed);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background: var(--white);
+    z-index: 5;
+  }
 }
 header .header-container .colC .search_wrapper .search_wrap {
   position: relative;
   transition: 0.5s ease;
+}
+@media only screen and (max-width: 540px) {
+  header .header-container .colC .search_wrapper .search_wrap {
+    width: 100%;
+  }
 }
 header .header-container .colC .search_wrapper .search_wrap.search_wrap_active .search_input_wrap {
   width: 300px;
@@ -2964,7 +3002,7 @@ header .header-container .colC .search_wrapper .search_wrap.search_wrap_active .
 }
 @media only screen and (max-width: 540px) {
   header .header-container .colC .search_wrapper .search_wrap.search_wrap_active .search_input_wrap {
-    width: 140px;
+    width: 100%;
   }
 }
 header .header-container .colC .search_wrapper .search_wrap .search_input_wrap {
@@ -2988,7 +3026,9 @@ header .header-container .colC .search_wrapper .search_wrap .search_input_wrap {
 }
 @media only screen and (max-width: 540px) {
   header .header-container .colC .search_wrapper .search_wrap .search_input_wrap {
-    width: 120px;
+    width: 100%;
+    border-bottom: none;
+    padding: 0 20px;
   }
 }
 header .header-container .colC .search_wrapper .search_wrap .search_input_wrap input {
@@ -3007,6 +3047,19 @@ header .header-container .colC .search_wrapper .search_wrap .search_input_wrap i
 header .header-container .colC .search_wrapper .search_wrap .search_input_wrap input::placeholder {
   color: var(--white);
 }
+@media only screen and (max-width: 540px) {
+  header .header-container .colC .search_wrapper .search_wrap .search_input_wrap input::-moz-placeholder {
+    color: var(--black);
+  }
+  header .header-container .colC .search_wrapper .search_wrap .search_input_wrap input::placeholder {
+    color: var(--black);
+  }
+}
+@media only screen and (max-width: 540px) {
+  header .header-container .colC .search_wrapper .search_wrap .search_input_wrap input {
+    color: var(--black);
+  }
+}
 header .header-container .colC .search_wrapper .search_wrap .search_input_wrap .search_btn {
   flex: 0 1 auto;
   height: 22px;
@@ -3019,6 +3072,11 @@ header .header-container .colC .search_wrapper .search_wrap .search_input_wrap .
   height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
+}
+@media only screen and (max-width: 540px) {
+  header .header-container .colC .search_wrapper .search_wrap .search_input_wrap .search_btn img {
+    filter: invert(1);
+  }
 }
 header .header-container .colC .search_wrapper .search_wrap .search_dropdown_menu {
   display: none;

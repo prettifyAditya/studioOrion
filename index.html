@@ -247,6 +247,9 @@
                     </ul>
                 </div>
                 <div class="colC">
+                    <button class="mobSearch">
+                        <img src="assets/icon/search-white.svg" alt="">
+                    </button>
                     <div class="search_wrapper">
                         <div class="search_wrap">
                             <div class="search_input_wrap">
@@ -1185,5 +1188,19 @@
         integrity="sha512-Ysw1DcK1P+uYLqprEAzNQJP+J4hTx4t/3X2nbVwszao8wD+9afLjBQYjz7Uk4ADP+Er++mJoScI42ueGtQOzEA=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script type="text/javascript" src="assets/js/main.js"></script>
+    <script>
+        $(function() {
+            if(window.matchMedia("(max-width: 541px)").matches){
+                $('.mobSearch').click(function(){
+                    $('.search_wrapper').addClass('open')
+                })
+            }
+            $('body').click(function (e) {
+                if (!$(e.target).closest('.mobSearch').length && !$(e.target).closest('.search_wrapper').length) {
+                    $('.search_wrapper').removeClass('open')
+                }
+            });
+        })
+    </script>
 </body>
 </html>
