@@ -5,6 +5,17 @@ $(function () {
         }); 
         $(window).scrollTop() > 100 ? $('header').addClass('header-fixed') : $('header').removeClass('header-fixed');
     }
+    const $backToTop = $('.back-to-top');
+
+    $(window).on('scroll', function () {
+        if($backToTop){
+            $backToTop.toggleClass('active', $(this).scrollTop() > 200);
+        }
+    });
+    $backToTop.on('click', function (e) {
+        e.preventDefault();
+        $('html, body').animate({ scrollTop: 0 }, 1000);
+    });
 
     // Header Dropdown
 

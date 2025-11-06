@@ -1388,3 +1388,32 @@ em
     margin-top: var(--headerheight)
 .primary
     color: $primary
+
+.back-to-top
+    position: fixed
+    z-index: 3
+    right: 30px
+    bottom: 70px
+    height: 50px
+    width: 50px
+    display: flex
+    align-items: center
+    justify-content: center
+    border-radius: 50%
+    background: $primary
+    transition: .6s ease
+    transform: translateX(calc( 100% + 30px ))
+    outline: none
+    @include media(769)
+        width: 40px
+        height: 40px
+        right: 20px
+    &:active
+        opacity: .8
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px
+    &.active
+        transform: translateX(0)
+    svg
+        width: 50%
+        height: auto
+        fill: $white

@@ -66,6 +66,11 @@
 .banner.home-banner .bg .banner-wrapper .container-fluid .content, .banner.home-banner .bg .banner-wrapper .container .content {
   max-width: 700px;
 }
+@media only screen and (max-width: 540px) {
+  .banner.home-banner .bg .banner-wrapper .container-fluid .content, .banner.home-banner .bg .banner-wrapper .container .content {
+    max-width: 320px;
+  }
+}
 .banner.home-banner .bg .banner-wrapper .container-fluid .content p, .banner.home-banner .bg .banner-wrapper .container .content p {
   max-width: 356px;
 }
