@@ -12,12 +12,92 @@
   }
 }
 .privacy-secA {
-  padding: 4rem 0;
+  padding: 5rem 0 4rem;
 }
 @media only screen and (max-width: 675px) {
   .privacy-secA {
-    padding: 3rem 0;
+    padding: 3rem 0 3rem;
   }
+}
+.privacy-secA .website-content h1 {
+  font-size: 48px;
+  margin-bottom: 45px;
+  font-family: "Kugile";
+  color: var(--primary);
+  text-align: center;
+}
+@media only screen and (max-width: 675px) {
+  .privacy-secA .website-content h1 {
+    font-size: 34px;
+    margin-bottom: 30px;
+  }
+}
+@media only screen and (max-width: 520px) {
+  .privacy-secA .website-content h1 {
+    font-size: 30px;
+    margin-bottom: 25px;
+  }
+}
+.privacy-secA .website-content h2 {
+  font-size: 34px;
+  font-family: "Optima";
+}
+@media only screen and (max-width: 675px) {
+  .privacy-secA .website-content h2 {
+    font-size: 24px;
+  }
+}
+.privacy-secA .website-content h3 {
+  font-size: 28px;
+  line-height: 1.21;
+  font-family: "Optima";
+}
+@media only screen and (max-width: 675px) {
+  .privacy-secA .website-content h3 {
+    font-size: 22px;
+  }
+}
+.privacy-secA .website-content h4 {
+  font-size: 22px;
+  font-family: "Optima";
+}
+@media only screen and (max-width: 675px) {
+  .privacy-secA .website-content h4 {
+    font-size: 20px;
+  }
+}
+.privacy-secA .website-content h5 {
+  font-size: 18px;
+  font-family: "Optima";
+}
+@media only screen and (max-width: 675px) {
+  .privacy-secA .website-content h5 {
+    font-size: 18px;
+  }
+}
+.privacy-secA .website-content h6 {
+  font-size: 18px;
+  font-family: "Optima";
+}
+.privacy-secA .website-content h2, .privacy-secA .website-content h3, .privacy-secA .website-content h4 {
+  margin: 40px 0 18px;
+}
+@media only screen and (max-width: 675px) {
+  .privacy-secA .website-content h2, .privacy-secA .website-content h3, .privacy-secA .website-content h4 {
+    margin: 30px 0 15px;
+  }
+}
+.privacy-secA .website-content h5, .privacy-secA .website-content h6 {
+  margin: 28px 0 18px;
+}
+@media only screen and (max-width: 675px) {
+  .privacy-secA .website-content h5, .privacy-secA .website-content h6 {
+    margin: 20px 0 13px;
+  }
+}
+.privacy-secA .website-content a {
+  color: var(--black);
+  transition: 0.4s ease;
 }
 
 .banner.thank-you-banner .bg {
