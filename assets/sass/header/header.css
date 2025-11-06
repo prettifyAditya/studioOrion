@@ -497,7 +497,7 @@
   --headerpadding: 12px;
   --headerheight: 90px;
   --headerfixed: 80px;
-  --footerstrip: 38px;
+  --footerstrip: 60px;
   --filterstrip: 42px;
   --elementhover: #B18876;
   --primary: #B18876;
@@ -592,6 +592,11 @@ body::-webkit-scrollbar-thumb {
 body.overflow-hidden {
   overflow: hidden;
   margin-right: 8px;
+}
+@media only screen and (max-width: 768px) {
+  body.overflow-hidden {
+    margin-right: 0;
+  }
 }
 body.overflow-hidden header {
   width: calc(100% - 8px);
@@ -3939,6 +3944,11 @@ footer {
   background: var(--gradient-a);
   position: relative;
 }
+@media only screen and (max-width: 675px) {
+  footer {
+    margin-bottom: var(--footerstrip);
+  }
+}
 footer::before {
   content: "";
   position: absolute;
@@ -4517,6 +4527,11 @@ footer .bottom-footer .flex .pret a img {
   translate: 3% 3%;
   z-index: 5;
 }
+@media only screen and (max-width: 675px) {
+  .sticky_action {
+    display: none;
+  }
+}
 .sticky_action .whatsapp {
   display: flex;
   align-items: center;
@@ -4738,4 +4753,44 @@ footer .bottom-footer .flex .pret a img {
   .list-filter-wrap .list-filter .adi-select-wrap.sort_by {
     padding-right: 0;
   }
+}
+
+.footer-strip {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 4;
+  height: var(--footerstrip);
+  background: var(--black);
+  display: none;
+}
+@media only screen and (max-width: 540px) {
+  .footer-strip {
+    display: block;
+  }
+}
+.footer-strip ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+.footer-strip ul li {
+  flex: 1;
+}
+.footer-strip ul li:not(:last-child) {
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+.footer-strip ul li a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8px;
+  gap: 3px;
+  color: var(--white);
+  font-size: 14px;
+  height: var(--footerstrip);
+}
+.footer-strip ul li a svg {
+  width: 20px;
+  height: 20px;
 }/*# sourceMappingURL=header.css.map */

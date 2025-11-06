@@ -379,8 +379,8 @@
 .about-secC .vision-flex .colB figure {
   width: 380px;
   height: 450px;
-  -webkit-mask-image: url(/assets/video/mask-image.png);
-          mask-image: url(/assets/video/mask-image.png);
+  -webkit-mask-image: url(../../video/mask-image.png);
+          mask-image: url(../../video/mask-image.png);
   -webkit-mask-size: 100%;
           mask-size: 100%;
   -webkit-mask-repeat: no-repeat;

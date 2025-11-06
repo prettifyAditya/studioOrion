@@ -14,7 +14,7 @@ $scrollwidth: 8px
     --headerpadding: 12px
     --headerheight: 90px
     --headerfixed: 80px
-    --footerstrip: 38px
+    --footerstrip: 60px
     --filterstrip: 42px
     --elementhover: #B18876
     --primary: #B18876
@@ -79,6 +79,8 @@ body
     &.overflow-hidden
         overflow: hidden
         margin-right: $scrollwidth
+        @include media(768)
+            margin-right: 0
         header
             width: calc(100% - $scrollwidth)
 body,html

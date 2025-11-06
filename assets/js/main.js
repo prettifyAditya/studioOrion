@@ -94,6 +94,7 @@ $(function () {
     if(window.matchMedia("(max-width: 541px)").matches){
         $('.mobSearch').click(function(){
             $('.search_wrapper').addClass('open')
+            $searchInput.focus()
         })
     }
     $('body').click(function (e) {
