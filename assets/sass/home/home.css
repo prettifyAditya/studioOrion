@@ -98,6 +98,9 @@
 .home-secA .container-fluid .category_wrapper .upper-sec .category-slider {
   position: relative;
 }
+.home-secA .container-fluid .category_wrapper .upper-sec .category-slider .category-nav {
+  max-width: 96%;
+}
 @media only screen and (max-width: 1280px) {
   .home-secA .container-fluid .category_wrapper .upper-sec .category-slider .swiper-wrapper .category-col figcaption h6 {
     font-size: 32px;

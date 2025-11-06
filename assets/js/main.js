@@ -52,7 +52,7 @@ $(function () {
                 $('.product-not-found').show();
             }
 
-            if(window.matchMedia("(min-width: 541px)").matches){
+            if(window.matchMedia("(min-width: 992px)").matches){
                 $searchOpenImg.hide();
                 $searchCloseImg.show();
                 $searchBtn.addClass('close-search-btn');
@@ -61,14 +61,14 @@ $(function () {
             $searchedProducts.show();
             $('.no-results').hide();
             $searchDropdown.stop(true, true).slideUp(200).removeClass('is-open');
-            if(window.matchMedia("(min-width: 541px)").matches){
+            if(window.matchMedia("(min-width: 992px)").matches){
                 $searchOpenImg.show();
                 $searchCloseImg.hide();
                 $searchBtn.removeClass('close-search-btn');
             }
         }
     });
-    if(window.matchMedia("(max-width: 541px)").matches){
+    if(window.matchMedia("(max-width: 991px)").matches){
         $searchOpenImg.hide();
         $searchCloseImg.show();
         $searchBtn.addClass('close-search-btn');
@@ -92,17 +92,17 @@ $(function () {
         $searchDropdown.stop().slideUp();
         $searchDropdown.removeClass('is-open');
         $searchWrap.removeClass('search_wrap_active')
-        if(window.matchMedia("(min-width: 541px)").matches){ 
+        if(window.matchMedia("(min-width: 992px)").matches){ 
             $searchCloseImg.hide();
             $searchOpenImg.show();
             $searchBtn.removeClass('close-search-btn');
         }
-        if(window.matchMedia("(max-width: 541px)").matches){ 
+        if(window.matchMedia("(max-width: 992px)").matches){ 
             $('.search_wrapper').removeClass('open')
         }
     })
 
-    if(window.matchMedia("(max-width: 541px)").matches){
+    if(window.matchMedia("(max-width: 992px)").matches){
         $('.mobSearch').click(function(){
             $('.search_wrapper').addClass('open')
             $searchInput.focus()

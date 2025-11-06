@@ -2659,11 +2659,6 @@ header .header-container {
     gap: 2rem;
   }
 }
-@media only screen and (max-width: 991px) {
-  header .header-container {
-    gap: 1rem;
-  }
-}
 header .header-container .colA, header .header-container .colB, header .header-container .colC {
   height: 100%;
   display: flex;
@@ -2684,11 +2679,6 @@ header .header-container .colB {
   align-items: center;
   justify-content: center;
 }
-@media only screen and (max-width: 991px) {
-  header .header-container .colB {
-    justify-content: flex-start;
-  }
-}
 @media only screen and (max-width: 768px) {
   header .header-container .colB {
     display: none;
@@ -2701,11 +2691,6 @@ header .header-container .colB .nav-items {
   gap: 40px;
 }
 @media only screen and (max-width: 1336px) {
-  header .header-container .colB .nav-items {
-    gap: 30px;
-  }
-}
-@media only screen and (max-width: 991px) {
   header .header-container .colB .nav-items {
     gap: 30px;
   }
@@ -2976,7 +2961,7 @@ header .header-container .colC {
 header .header-container .colC .mobSearch {
   display: none;
 }
-@media only screen and (max-width: 540px) {
+@media only screen and (max-width: 991px) {
   header .header-container .colC .mobSearch {
     display: block;
   }
@@ -3009,7 +2994,7 @@ header .header-container .colC .search_wrapper {
 header .header-container .colC .search_wrapper.open {
   transform: translate(0, 0%);
 }
-@media only screen and (max-width: 540px) {
+@media only screen and (max-width: 991px) {
   header .header-container .colC .search_wrapper {
     position: fixed;
     left: 0;
@@ -3028,7 +3013,7 @@ header .header-container .colC .search_wrapper .search_wrap {
   position: relative;
   transition: 0.5s ease;
 }
-@media only screen and (max-width: 540px) {
+@media only screen and (max-width: 991px) {
   header .header-container .colC .search_wrapper .search_wrap {
     width: 100%;
   }
@@ -3037,16 +3022,6 @@ header .header-container .colC .search_wrapper .search_wrap.search_wrap_active .
   width: 300px;
 }
 @media only screen and (max-width: 991px) {
-  header .header-container .colC .search_wrapper .search_wrap.search_wrap_active .search_input_wrap {
-    width: 160px;
-  }
-}
-@media only screen and (max-width: 768px) {
-  header .header-container .colC .search_wrapper .search_wrap.search_wrap_active .search_input_wrap {
-    width: 250px;
-  }
-}
-@media only screen and (max-width: 540px) {
   header .header-container .colC .search_wrapper .search_wrap.search_wrap_active .search_input_wrap {
     width: 100%;
   }
@@ -3061,16 +3036,6 @@ header .header-container .colC .search_wrapper .search_wrap .search_input_wrap {
   transition: 0.5s ease;
 }
 @media only screen and (max-width: 991px) {
-  header .header-container .colC .search_wrapper .search_wrap .search_input_wrap {
-    width: 120px;
-  }
-}
-@media only screen and (max-width: 768px) {
-  header .header-container .colC .search_wrapper .search_wrap .search_input_wrap {
-    width: 180px;
-  }
-}
-@media only screen and (max-width: 540px) {
   header .header-container .colC .search_wrapper .search_wrap .search_input_wrap {
     width: 100%;
     border-bottom: none;
@@ -3093,7 +3058,7 @@ header .header-container .colC .search_wrapper .search_wrap .search_input_wrap i
 header .header-container .colC .search_wrapper .search_wrap .search_input_wrap input::placeholder {
   color: var(--white);
 }
-@media only screen and (max-width: 540px) {
+@media only screen and (max-width: 991px) {
   header .header-container .colC .search_wrapper .search_wrap .search_input_wrap input::-moz-placeholder {
     color: var(--black);
   }
@@ -3101,7 +3066,7 @@ header .header-container .colC .search_wrapper .search_wrap .search_input_wrap i
     color: var(--black);
   }
 }
-@media only screen and (max-width: 540px) {
+@media only screen and (max-width: 991px) {
   header .header-container .colC .search_wrapper .search_wrap .search_input_wrap input {
     color: var(--black);
   }
@@ -3119,7 +3084,7 @@ header .header-container .colC .search_wrapper .search_wrap .search_input_wrap .
   -o-object-fit: contain;
      object-fit: contain;
 }
-@media only screen and (max-width: 540px) {
+@media only screen and (max-width: 991px) {
   header .header-container .colC .search_wrapper .search_wrap .search_input_wrap .search_btn img {
     filter: invert(1);
   }
@@ -3151,7 +3116,7 @@ header .header-container .colC .search_wrapper .search_wrap .search_dropdown_men
 }
 @media only screen and (max-width: 540px) {
   header .header-container .colC .search_wrapper .search_wrap .search_dropdown_menu {
-    max-height: 53vh;
+    max-height: 60vh;
   }
 }
 header .header-container .colC .search_wrapper .search_wrap .search_dropdown_menu .dropdown_wrap {
