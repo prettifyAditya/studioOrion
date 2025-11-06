@@ -104,7 +104,14 @@ $(function () {
     });
     //
 
-
+    const labelInput = $("input, textarea");
+    labelInput.on('change', function () {
+        if ($(this).val() !== "") {
+            $(this).addClass("valid");
+        } else {
+            $(this).removeClass("valid");
+        }
+    });
     const formControls = $(".form-control");
     formControls.on('focus input change blur', throttle(handleForm));
     formControls.each(function () {
