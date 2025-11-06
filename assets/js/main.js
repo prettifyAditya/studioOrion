@@ -81,7 +81,7 @@ $(function () {
         $searchDropdown.stop().slideUp();
         $searchDropdown.removeClass('is-open');
         $searchWrap.removeClass('search_wrap_active')
-        if(window.matchMedia("(max-width: 541px)").matches){ 
+        if(window.matchMedia("(min-width: 541px)").matches){ 
             $searchCloseImg.hide();
             $searchOpenImg.show();
             $searchBtn.removeClass('close-search-btn');
@@ -91,6 +91,16 @@ $(function () {
         }
     })
 
+    if(window.matchMedia("(max-width: 541px)").matches){
+        $('.mobSearch').click(function(){
+            $('.search_wrapper').addClass('open')
+        })
+    }
+    $('body').click(function (e) {
+        if (!$(e.target).closest('.mobSearch').length && !$(e.target).closest('.search_wrapper').length) {
+            $('.search_wrapper').removeClass('open')
+        }
+    });
     //
 
 
