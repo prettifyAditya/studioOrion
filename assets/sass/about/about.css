@@ -145,6 +145,11 @@
     max-width: 100%;
   }
 }
+@media only screen and (max-width: 540px) {
+  .about-secA .about_wrap .colB .heading {
+    text-align: center;
+  }
+}
 .about-secA .about_wrap .colB .heading h2 {
   font-family: "Optima";
   font-size: 48px;
@@ -177,6 +182,13 @@
     font-size: 18px;
   }
 }
+@media only screen and (max-width: 540px) {
+  .about-secA .about_wrap .colB .heading .subhead {
+    max-width: 200px;
+    margin: 0 auto;
+    line-height: 1.3;
+  }
+}
 .about-secA .about_wrap .colB .content {
   padding: 20px 0 30px;
   max-width: 560px;
@@ -184,6 +196,12 @@
 @media only screen and (max-width: 768px) {
   .about-secA .about_wrap .colB .content {
     padding: 20px 0 0;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .about-secA .about_wrap .colB .content {
+    text-align: justify;
+    word-spacing: -2px;
   }
 }
 .about-secA .about_wrap .colB .content p {
@@ -322,6 +340,11 @@
 @media only screen and (max-width: 768px) {
   .about-secC .vision-flex .colA {
     max-width: 100%;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .about-secC .vision-flex .colA figcaption {
+    text-align: center;
   }
 }
 .about-secC .vision-flex .colA figcaption h3 {

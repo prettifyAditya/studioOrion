@@ -76,6 +76,8 @@
                 flex: 1
                 max-width: 100%
             .heading
+                @include media(540)
+                    text-align: center
                 h2
                     font-family: $Optima
                     font-size: 48px
@@ -94,11 +96,18 @@
                     color: $white
                     @include media(768) 
                         font-size: 18px
+                    @include media(540) 
+                        max-width: 200px
+                        margin: 0 auto
+                        line-height: 1.3
             .content
                 padding: 20px 0 30px
                 max-width: 560px
                 @include media(768) 
                     padding: 20px 0 0 
+                @include media(540) 
+                    text-align: justify
+                    word-spacing: -2px
                 p
                     color: var(--colortext)
 
@@ -180,6 +189,8 @@
             @include media(768) 
                 max-width: 100%
             figcaption
+                @include media(540) 
+                    text-align: center
                 h3
                     font-family: $Optima
                     font-size: 36px

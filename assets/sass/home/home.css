@@ -410,6 +410,11 @@
     height: 80vh;
   }
 }
+@media only screen and (max-width: 540px) {
+  .home-secD .banner .bg {
+    height: 50vh;
+  }
+}
 
 .home-secE {
   background: var(--white);

@@ -261,8 +261,6 @@ header
                         transform: translateX(-5px)
                     &:not(:last-child)
                         margin-bottom: 6px  
-                        @include media(540)
-                            margin-bottom: 4px
                 &:hover
                     span:nth-child(2)
                         transform: translateX(0px)
@@ -1156,6 +1154,8 @@ footer
         background: url(../../images/logo-dark.svg) no-repeat $white
         background-position: 190% 110%
         opacity: 0.1
+        @include media(540)
+            background-size: 80%
     &.is-open
         transform: translateX(0%)
     .close
@@ -1309,6 +1309,8 @@ footer
         background-position: 190% 110%
         z-index: -1
         opacity: 0.1
+        @include media(540)
+            background-size: 85%
     &.is-open
         transform: translateX(0%)
     .close

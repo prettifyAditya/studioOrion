@@ -2939,11 +2939,6 @@ header .header-container .colC button.ham-btn span:nth-child(2) {
 header .header-container .colC button.ham-btn span:not(:last-child) {
   margin-bottom: 6px;
 }
-@media only screen and (max-width: 540px) {
-  header .header-container .colC button.ham-btn span:not(:last-child) {
-    margin-bottom: 4px;
-  }
-}
 header .header-container .colC button.ham-btn:hover span:nth-child(2) {
   transform: translateX(0px);
 }
@@ -4178,6 +4173,11 @@ footer .bottom-footer .flex .pret a img {
   background-position: 190% 110%;
   opacity: 0.1;
 }
+@media only screen and (max-width: 540px) {
+  .model.ham-pop::before {
+    background-size: 80%;
+  }
+}
 .model.ham-pop.is-open {
   transform: translateX(0%);
 }
@@ -4377,6 +4377,11 @@ footer .bottom-footer .flex .pret a img {
   background-position: 190% 110%;
   z-index: -1;
   opacity: 0.1;
+}
+@media only screen and (max-width: 540px) {
+  .enquire-pop::before {
+    background-size: 85%;
+  }
 }
 .enquire-pop.is-open {
   transform: translateX(0%);
